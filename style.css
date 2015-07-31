@@ -1,0 +1,189 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0 0 15px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Header Navigation Bar -------------------- */
+
+header {
+  box-sizing: border-box;
+  background-color: #FFB4B0;
+  border: 2px solid black;
+  margin: 0;
+  padding-left: 10px;
+  position: fixed;
+  top: 15px;
+  width: inherit;
+  flex: 1 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  padding: 15px 5px;
+}
+
+nav span {
+  border-right: 2px solid black;
+}
+
+nav .active {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+/* Left Control Area ------------------------- */
+
+.controls {
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  padding: 0 10px;
+  width: 0;
+  margin-top: 80px;
+  flex-grow: 5;
+}
+
+.controls label {
+  display: inline-block;
+  margin: 17px 0 5px;
+}
+
+.fullwide {
+  width: 100%;
+}
+
+.controls ul {
+  float: left;
+  padding: 0 15px 2px;
+}
+
+.controls li {
+  list-style-type: none;
+  margin-bottom: 8px;
+}
+
+.controls select {
+  border: 2px solid black;
+}
+
+.filter {
+  clear: both;
+}
+
+.filter input {
+  display: block;
+  width: 110px;
+  font-size: 1.1em;
+  background-color: #eee;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 0 auto 15px;
+}
+
+/* Right Content Area ------------------------ */
+
+.content {
+  background-color: #FEFAC0;
+  border: 2px solid black;
+  padding: 0 0 30px 30px;
+  margin: 80px 0 0 15px;
+  width: 0;
+  flex-grow: 10;
+}
+
+.content h1 {
+  color: #785616;
+  font-weight: normal;
+  font-size: 1.8em;
+  margin: 30px 0 10px;
+}
+
+.content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.content li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.content span {
+  border-right: 1px solid black;
+}
+
+#delete {
+  float: left;
+}
+
+#more {
+  float: right;
+  clear: both;
+  margin: 20px 30px 0 0;
+}
+
+/* Breakpoint Massive ------------------------ */
+
+@media screen and (min-width: 1500px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+/* Breakpoint Tablet ------------------------- */
+
+@media screen and (max-width: 1060px) {
+  .container {
+    width: 97%;
+  }
+}
+
+/* Breakpoint Mobile ------------------------- */
+
+@media screen and (max-width: 650px) {
+  .container {
+    display: block;
+  }
+  .controls {
+    width: auto;
+    margin-bottom: 15px;
+  }
+  .content {
+    width: auto;
+    margin: 0;
+  }
+}
+
+/* Breakpoint Tiny --------------------------- */
+
+@media screen and (max-width: 243px) {
+  .controls ul:nth-child(2n+1) {
+    margin-bottom: 0;
+  }
+  .controls ul:nth-child(2n+0) {
+    margin-top: 0;
+  }
+}

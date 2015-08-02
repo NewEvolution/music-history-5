@@ -1,11 +1,7 @@
 requirejs(["dom-access", "populate-songs", "get-more-songs"], function(dom, populate, more){
-  $.ajax().done(function(data) {
-    songWriter(populate.giveSongs(), dom.getDomElement());
-  });
+  populate.getSongs(songWriter, dom.getDomElement());
   $("#more").click(function(e) {
-    $.ajax().done(function(data) {
-      songWriter(more.giveSongs(), dom.getDomElement());
-    });
+    more.getSongs(songWriter, dom.getDomElement());
   });
 });
 

@@ -1,13 +1,11 @@
 define(function(){
-  var songArr = [];
-  $.ajax({
-    url: "songlist.json"
-  }).done(function(data) {
-    songArr = data.songs;
-  });
   return {
-    giveSongs: function() {
-      return songArr;
+    getSongs: function(callback, passthrough) {
+      $.ajax({
+        url: "songlist.json"
+      }).done(function(data) {
+        callback.call(this, data.songs, passthrough);
+      });
     }
   };
 });

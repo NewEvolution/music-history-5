@@ -1,10 +1,10 @@
 define(function(){
   return {
-    getSongs: function(callback, passthrough) {
+    getSongs: function(sentFunc, sentDom) {
       $.ajax({
         url: "songlist.json"
       }).done(function(data) {
-        callback.call(this, data.songs, passthrough);
+        sentFunc(data.songs, sentDom);
       });
     }
   };

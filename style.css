@@ -102,13 +102,14 @@ nav .active {
   background-color: #4DD7FA;
   border: 2px solid black;
   padding: 0 10px;
-  width: 0;
+  width: auto;
   margin-top: 80px;
   flex-grow: 5;
 }
 
 .controls form {
-  /*position: fixed;*/
+  position: fixed;
+  width: inherit;
 }
 
 .controls label {
@@ -200,7 +201,7 @@ nav .active {
 
 /* Breakpoint Tablet ------------------------- */
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1200px) {
   .container {
     width: 97%;
   }
@@ -208,7 +209,7 @@ nav .active {
 
 /* Breakpoint Mobile ------------------------- */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 870px) {
   .container {
     display: block;
   }
@@ -218,6 +219,10 @@ nav .active {
   .controls {
     width: auto;
     margin-bottom: 15px;
+  }
+  .controls form {
+    position: static;
+    width: inherit;
   }
   .content {
     width: auto;
